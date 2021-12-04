@@ -13,7 +13,12 @@ spec:
         app: simplewebservice
     spec:
       containers:
-        - name: simplewebservice
-          image: tomcoolpxl/simplewebservice:0.0.3-SNAPSHOT
+        - name: backend
+          image: christofbuckxpxl/kubernetes_backend
           ports:
             - containerPort: 8080
+  
+        - name: frontend
+          image: christofbuckxpxl/kubernetes_frontend
+          ports:
+            - containerPort: 8081
